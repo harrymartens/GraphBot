@@ -1,0 +1,71 @@
+<html>
+  <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" />
+
+  <div class="title">
+    <img src="assets/logo.png" alt="Logo" width="268px" />
+    <hr />
+  </div>
+
+  <div class="contentColumn">
+    <div class="displayedQuery">
+      <h3>{{ this.currentQuery }}</h3>
+      <div class="download-container">
+      </div>
+    </div>
+    <div class="chart-container">
+      <canvas [id]="chartId"></canvas>
+      <button
+      mat-fab
+      class="downloadButton"
+      (click)="downloadImage()"
+      style="background-color: #01359a"
+    >
+      <mat-icon>download</mat-icon>
+    </button>
+    </div>
+
+    <div class="querySection">
+      <input
+        type="file"
+        class="file-input"
+        (change)="onFileSelected($event)"
+        #fileUpload
+        accept=".csv,.xlsx,.tsv"
+      />
+
+      <div class="buttons">
+        <button class="attachButton" (click)="fileUpload.click()">
+          Attached: {{ fileName }}
+          <mat-icon>attach_file</mat-icon>
+        </button>
+        <button class="attachButton" (click)="regenerateResponse()">
+          Regenerate response
+          <mat-icon [class.spin]="isSpinning" >autorenew</mat-icon>
+        </button>
+      </div>
+
+
+      <div class="promptBox">
+        <mat-form-field style="margin-bottom: -1.25em">
+          <mat-label>Enter a prompt here</mat-label>
+          <input
+            matInput
+            [formControl]="inputQuery"
+            placeholder="Example : Plot gene expression of ..."
+            (keyup.enter)="sendQuery()"
+          />
+        </mat-form-field>
+        <button
+        mat-fab
+        class="sendButton"
+        (click)="sendQuery()"
+        style="background-color: #01359a"
+        [disabled]="!inputQuery.value"
+      >
+        <mat-icon>send</mat-icon>
+      </button>
+
+      </div>
+    </div>
+  </div>
+</html>

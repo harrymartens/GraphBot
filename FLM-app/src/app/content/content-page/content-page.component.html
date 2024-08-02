@@ -1,0 +1,18 @@
+<div class="sideBar" [ngClass]="{ expanded: isExpanded }">
+  <hr class="divider" />
+  <button mat-button (click)="openDialog()">
+    <mat-icon fontIcon="help"></mat-icon>
+    <span *ngIf="isExpanded" style="color: #e5e5e5 !important;">Help</span>
+  </button>
+  <button mat-button class="spinner" (click)="toggleWidth()">
+    <mat-icon fontIcon="arrow_forward_ios"></mat-icon>
+  </button>
+</div>
+
+<div id="main">
+  <div class="info-box">
+    <app-intro-state *ngIf="!queryService.getQueries().length"></app-intro-state>
+    <app-query-state *ngIf="queryService.getQueries().length"></app-query-state>
+    <!-- <app-query-state /> -->
+  </div>
+</div>

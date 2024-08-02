@@ -1,0 +1,70 @@
+<html>
+  <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" />
+  <div class="introContent">
+    <div class="title">
+      <div class="titleLine">
+        <h1>Welcome to</h1>
+        <img src="assets/logo.png" alt="Logo" width="268px">
+      </div>
+      <br>
+      <h4>A powerful AI service to enhance your data visualisations</h4>
+    </div>
+    <div class="attachButton" *ngIf="!this.uploadedFile">
+      <input
+        type="file"
+        class="file-input"
+        (change)="onFileSelected($event)"
+        #fileUpload
+        accept=".csv,.xlsx,.tsv"
+      />
+      <div class="file-upload">
+        <button
+          mat-raised-button
+          class="upload-btn"
+          (click)="fileUpload.click()"
+        >
+          Securely Upload Your Data
+          <mat-icon>attach_file</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="promptBox" *ngIf="this.uploadedFile">
+      <mat-form-field>
+        <mat-label>Enter a prompt here</mat-label>
+        <input
+          matInput
+          [formControl]="inputQuery"
+          placeholder="Example : Plot gene expression of ..."
+          (keyup.enter)="sendQuery()"
+        />
+      </mat-form-field>
+
+      <button
+        mat-fab
+        class="sendButton"
+        (click)="sendQuery()"
+        style="background-color: #01359a"
+        [disabled]="!inputQuery.value"
+      >
+        <mat-icon>send</mat-icon>
+      </button>
+    </div>
+    <div class="overviewSpecs">
+      <div class="specBox">
+        <mat-icon fontIcon="insights"></mat-icon>
+        <h3>Graphing made easy</h3>
+        <p>Explore complex data with NLP-powered visualisations.</p>
+      </div>
+      <div class="specBox">
+        <mat-icon fontIcon="query_stats"></mat-icon>
+        <h3>Uncover hidden patterns</h3>
+        <p>Visualisations for your bioinformatics data.</p>
+      </div>
+      <div class="specBox">
+        <mat-icon fontIcon="settings_suggest"></mat-icon>
+        <h3>Increase efficiency</h3>
+        <p>Gain insights, communicate clearly.</p>
+      </div>
+    </div>
+  </div>
+</html>

@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1 {
+    color: #e5e5e5 !important;
+    font-family: "Inter" !important;
+    font-size: 48px !important;
+    font-weight: 900 !important;
+    margin:0px !important;
+  }
+
+  h3 {
+    color: #e5e5e5 !important;
+    font-family: "Inter" !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.5 !important;
+  }
+  
+  h4 {
+    color: #e5e5e5 !important;
+    font-family: "Inter" !important;
+    font-size: 16px !important;
+  }
+
+  p {
+    color: #e5e5e5 !important;
+    font-family: "Inter" !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+  }
+
+  .mat-icon {
+    color: #e5e5e5;
+  }
+
+  .promptBox {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .mat-mdc-fab[disabled], .mat-mdc-fab.mat-mdc-button-disabled {
+    background-color: #e5e5e5 !important;
+    opacity: 0.25;
+    .mat-icon{
+      color: #01359a;
+    }
+  }

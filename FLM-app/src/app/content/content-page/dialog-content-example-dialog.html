@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>GraphBot</h2>
+<mat-dialog-content class="mat-typography">
+  <h1 style="color: #222222 !important;">User Documentation: GraphBot</h1>
+  <p style="color: #222222 !important;">Welcome to GraphBot, an AI-powered graph generation tool. This website is designed to help you quickly and easily create aesthetic visualisations of your data. With an easy-to-use interface, you can create and download visualisations of your data through simple requests in plain English terms. Our application will then process your request and create a downloadable graph.</p>
+  <p style="color: #222222 !important;">To ensure your data remains secure, our machine-learning model is integrated into the website, meaning your data remains under your control at all times, never being sent away to unknown external parties.</p>
+
+  <h2>How to use the tool</h2>
+  <ol>
+      <li><strong>Upload your data:</strong> Make sure you upload your data file to the website in the correct format for the creation of your graph.</li>
+      <li><strong>Enter your query:</strong> Explain how you want your data to be graphed in the search bar, including the variables used for the x and y axes, as well as what type of graph should be created. See below for example requests.</li>
+      <li><strong>Generate your graph:</strong> Click the send button to analyse your request and create a graph of your data. You can download your new graph by clicking the button below the new image.</li>
+      <li><strong>What next:</strong> Congratulations! You have successfully created a plot of your data using natural language. You can now close the browser which will delete all cached information about your datafile. If desired, you can enter a new request to produce a different visualisation of your data or upload a new file to create a graph of different data.</li>
+  </ol>
+
+  <h2>Requirements</h2>
+  <p style="color: #222222 !important;">The following list contains the user requirements for using this website. If the program is not working as desired, please refer back to this list to ensure you are setting up your data correctly.</p>
+  <ul>
+      <li>The data file uploaded should be a CSV or spreadsheet file</li>
+      <li>The first row of the data file should be column names</li>
+      <li>The first column of the data file should be a name for each row.</li>
+  </ul>
+  <a href="assets/GraphBot.csv" download="GraphBot.csv">
+    Click here to download an example CSV file
+  </a>
+  <br>
+  <br>
+
+  <h2>Example Queries</h2>
+  <ul>
+      <li>Create a scatter graph and view the relationship between the expression level of RNPEP and patient age</li>
+      <li>Depict a scatter comparing the log2 fold change in the expression of the groups PSMC3 (control) and HBM (untreated)</li>
+      <li>Could you generate a scatter graph of LOXL1 expression versus ADCY5 levels?</li>
+  </ul>
+  <p style="color: #222222 !important;">The following list contains the user requirements for using this website. If the program is not working as desired, please refer back to this list to ensure you are setting up your data correctly.</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Continue</button>
+</mat-dialog-actions>

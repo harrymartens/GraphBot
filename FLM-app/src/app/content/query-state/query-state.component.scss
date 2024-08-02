@@ -1,0 +1,176 @@
+.file-input {
+  display: none;
+}
+
+.title{
+  position: fixed;
+  top: 0;
+  left: 15px;
+  padding: 30px 30px 0px 30px;
+  width: calc(100% - 140px);
+  margin-left: 50px;
+  z-index: 1000;
+  background-color: #222222;
+}
+
+
+hr{
+  color: #e5e5e5;
+  opacity: 0.2;
+}
+
+html {
+  overflow: hidden; /* Hide scrollbars */
+}
+
+.contentColumn {
+  position: fixed;
+  top: 150px;
+  left: 90px;
+  width: calc(100% - 130px);
+  height: calc(100% - 180px);
+}
+
+.displayedQuery{
+  border-bottom: 1px solid #e5e5e5;
+  position: absolute;
+  left: 50%;
+  max-width: 80%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.chart-container {
+  position: absolute;
+  width: 60%;
+  padding-top: 30%;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+}
+
+
+.querySection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  top: calc(120px + 60%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.attachButton{
+  background-color: transparent;
+  border: 1px solid #444654;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  gap:10px;
+
+  font-size: 12px !important;
+  color: #e5e5e5;
+  padding: 10px 10px;
+
+  cursor:pointer;
+}
+
+.download-container{
+  display: flex;
+  justify-content: end;
+}
+
+.downloadButton{
+  width:40px;
+  height: 40px;
+  border-radius: 11px !important;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+
+.mat-mdc-raised-button:not(:disabled) {
+    background-color: #01359a;
+    color: #e5e5e5;
+  }
+
+
+  .mat-mdc-form-field {
+    width: 900px;
+  }
+  
+  ::ng-deep .mdc-text-field--filled {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+  
+  ::ng-deep
+    .mdc-text-field--filled:not(.mdc-text-field--disabled)
+    .mdc-floating-label,
+  .mdc-text-field--filled:not(.mdc-text-field--disabled)
+    .mdc-floating-label--float-above {
+    color: #e5e5e5 !important;
+  }
+  
+  ::ng-deep
+    .mdc-text-field--filled:not(.mdc-text-field--disabled)
+    .mdc-text-field__input {
+    color: #e5e5e5 !important;
+  }
+  
+  input::placeholder {
+    color: rgba(229, 229, 229, 0.3) !important;
+  }
+
+  .download-container{
+    display: flex;
+    justify-content: end;
+  }
+  
+  .downloadButton{
+    width:40px;
+    height: 40px;
+    border-radius: 11px !important;
+    position: absolute;
+    right: 0px;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .spin {
+    animation: spin 1s linear infinite;
+  }

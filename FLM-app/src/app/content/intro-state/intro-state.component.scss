@@ -1,0 +1,83 @@
+.introContent {
+  // margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 75px;
+  height:80vh;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h4 {
+  margin-top: -10px;
+}
+
+.titleLine{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+}
+
+.attachButton{
+  height:75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promptBox{
+  height:75px;
+}
+
+.overviewSpecs {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 100px;
+}
+
+.specBox {
+  width: 250px;
+}
+
+.file-input {
+  display: none;
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+  background-color: #01359a;
+  color: #e5e5e5;
+}
+
+.mat-mdc-form-field {
+  width: 900px;
+}
+
+::ng-deep .mdc-text-field--filled {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+::ng-deep
+  .mdc-text-field--filled:not(.mdc-text-field--disabled)
+  .mdc-floating-label,
+.mdc-text-field--filled:not(.mdc-text-field--disabled)
+  .mdc-floating-label--float-above {
+  color: #e5e5e5 !important;
+}
+
+::ng-deep
+  .mdc-text-field--filled:not(.mdc-text-field--disabled)
+  .mdc-text-field__input {
+  color: #e5e5e5 !important;
+}
+
+input::placeholder {
+  color: rgba(229, 229, 229, 0.3) !important;
+}
+
