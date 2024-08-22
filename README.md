@@ -1,5 +1,10 @@
 # Bioinformatic Graph Generation Tool
 
+<p float="left" align="middle">
+    <img src="./Assets/GraphBot%20Home.png" width="500" style="margin-right: 20px;">
+    <img src="./Assets/GraphBot%20Visualisation.png" width="500">
+</p>
+
 ## Project Description
 
 This project implements a machine learning model that generates bioinformatic graphs based on user-provided text queries. The model utilises Natural Language Processing (NLP) techniques to understand user intent and extract relevant information from the query. This information is then used to generate an appropriate bioinformatic graph using a visualisation library. This tool empowers researchers to explore complex biological data sets with ease by translating their scientific questions into interactive and informative visualisations.
